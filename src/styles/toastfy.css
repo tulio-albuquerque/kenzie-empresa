@@ -14,7 +14,6 @@
 .toastfySucess {
     background-color: var(--color-brand-300);
 }
-
 @media (min-width:700px) {
     .toastfy{
         right: 10px;
