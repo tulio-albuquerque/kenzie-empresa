@@ -20,5 +20,6 @@ const initial = () => {
         }
     })
 }
+
 initial()
 
