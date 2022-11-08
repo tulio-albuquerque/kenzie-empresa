@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
 :root {
   --color-grey-100: #000000;
   --color-grey-200: rgba(0,0,0,0.1);
