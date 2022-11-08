@@ -11,7 +11,7 @@ const initial = () => {
                 window.location.replace('../../../index.html')
             }, 2000);
         } else {
-            toastfy("Erro!", 'Email ou senha invalido!')
+            toastfy("Erro!" , 'Email ou senha invalido!')
             const form = document.querySelector('form');
             form.addEventListener('click', () => {
                 const toastfy = document.querySelector('.toastfy');
