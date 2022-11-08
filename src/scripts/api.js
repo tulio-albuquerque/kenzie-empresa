@@ -24,6 +24,10 @@ export async function login(user) {
         },
         body: JSON.stringify(user)
     })
+
+    fetch('https://fakestoreapi.com/users')
+    .then(res=>res.json())
+    .then(json=>console.log(json))
     if (loginUser.ok) {
         const response = await loginUser.json()
         saveLocal(response)
@@ -62,7 +66,6 @@ export async function register(user) {
                 phone: user.phone
             })
     })
-    console.log(await loginUser.json())
     if (loginUser.ok) {
         return true
     } else {

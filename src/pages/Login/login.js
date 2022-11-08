@@ -1,8 +1,8 @@
 import { shared } from "../../scripts/forms.js"
 import { toastfy } from "../../scripts/toastfy.js"
 const initial = () => {
-    const bntLogin = document.querySelector('#submit')
-    bntLogin.addEventListener('click', async (e) => {
+    const bntLogin = document.querySelector('form')
+    bntLogin.addEventListener('submit', async (e) => {
         e.preventDefault()
         const valid = await shared()
         if (valid) {

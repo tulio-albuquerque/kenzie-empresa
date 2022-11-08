@@ -2,15 +2,15 @@
 import { shared } from "../../scripts/forms.js";
 import { toastfy } from "../../scripts/toastfy.js";
 
-const BntRegister = document.querySelector('#bntRegister');
+const BntRegister = document.querySelector('form');
 
-BntRegister.addEventListener('click', async (event) => {
+BntRegister.addEventListener('submit', async (event) => {
     event.preventDefault()
     const validation = await shared()
     if (validation == true) {
         toastfy("Sucesso!", 'Cadastro feito com sucesso ,vamos entrar?')
         setTimeout(() => {
-            window.location.replace("../login/login.html")
+          window.location.replace("../login/login.html")
         }, 3000)
     } else {
         toastfy("Erro!", validation)
