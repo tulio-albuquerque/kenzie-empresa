@@ -13,8 +13,8 @@ export async function shared() {
        const validation = await login(body)
         return validation
     } else if (form.id == "register") {
-        //const validation = await register(body)
-        //return validation
+        const validation = await register(body)
+        return validation
     } 
 }
 
