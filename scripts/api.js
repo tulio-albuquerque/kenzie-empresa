@@ -1,12 +1,21 @@
+import { saveLocal } from "./localstorage.js"
+
 const baseUrl = 'https://fakestoreapi.com/'
 
 export async function login(user) {
-    const categories = await fetch(baseUrl + 'auth/login',{
-        method:'POST',
+    const loginUser = await fetch(baseUrl + 'auth/login', {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
         body: JSON.stringify(user)
     })
-
-    const response = await categories.json()
-    console.log(response)
-    //return response
+    if(loginUser.ok){
+        const response = await loginUser.json()
+        saveLocal(response)
+        return true
+    }else{
+        return false
+    }
 }
+
