@@ -72,3 +72,57 @@ export async function register(user) {
         return false
     }
 }
+
+
+export async function getAllProducts(){
+    try{
+      const products = await fetch(`${baseURL + "/products"}`, {
+        method: "GET"
+      });
+      let productsInfo = await products.json()
+      return productsInfo
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
+  
+  export async function getAllCategories(){
+    try{
+      const categories = await fetch(`${baseURL + "/products/categories"}`, {
+        method: "GET"
+      });
+      let categoryList = await categories.json()
+      return categoryList
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
+  
+  export async function getSingleUser(id){
+    try{
+      const user = await fetch(`${baseURL + `/users/${id}`}`, {
+        method: "GET"
+      });
+      let userInfo = await user.json()
+      console.log(userInfo)
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
+  
+  export async function addProductToCart(body){
+    try{
+    const product = await fetch('https://fakestoreapi.com/carts',{
+      method:"POST",
+      body:JSON.stringify(body)
+  });
+   let productInfo = await product.json()
+   console.log(productInfo)
+   return productInfo
+  }
+  catch(error){
+    console.log(error)
+  }}
