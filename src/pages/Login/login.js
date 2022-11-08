@@ -1,5 +1,5 @@
-import { shared } from "../../../scripts/forms.js"
-import { toastfy } from "../../../scripts/toastfy.js"
+import { shared } from "../../scripts/forms.js"
+import { toastfy } from "../../scripts/toastfy.js"
 const initial = () => {
     const bntLogin = document.querySelector('#submit')
     bntLogin.addEventListener('click', async (e) => {

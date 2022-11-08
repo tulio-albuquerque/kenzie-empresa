@@ -1,3 +1,5 @@
+import { saveLocal } from "./localstorage.js"
+
 const baseURL = "https://fakestoreapi.com"
 
 export const getSingleProduct = async (id) => {
@@ -14,3 +16,21 @@ export const listProductsInCategory = async (category) => {
   
   return response
 }
+
+export async function login(user) {
+    const loginUser = await fetch(`${baseURL}/auth/login`, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    })
+    if(loginUser.ok){
+        const response = await loginUser.json()
+        saveLocal(response)
+        return true
+    }else{
+        return false
+    }
+}
+
