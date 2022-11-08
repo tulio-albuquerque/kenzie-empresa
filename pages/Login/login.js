@@ -1,8 +1,10 @@
-import { getCategories } from "../../scripts/api.js"
+
+import { sherad } from "../../scripts/forms.js"
 
 const initial = () => {
-    const categories =  getCategories()
-
+    const bntLogin = document.querySelector('#submit')
+    sherad()
+    
     
 }
 
