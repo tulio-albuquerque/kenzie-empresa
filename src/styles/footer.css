@@ -77,6 +77,7 @@ footer {
     flex-direction: row;
     gap: 130px;
     width: inherit;
+    overflow-x: auto;
   }
 
   .footer-section__body {
