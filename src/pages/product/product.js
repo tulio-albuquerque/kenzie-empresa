@@ -1,4 +1,5 @@
 import { getSingleProduct, listProductsInCategory } from "../../scripts/api.js"
+import { configFooterExpandInfo } from "../../scripts/footer.js"
 
 const renderProductsByCategory = async (category) => {
   const products = await listProductsInCategory(category)
@@ -32,4 +33,5 @@ const renderProduct = async () => {
   renderProductsByCategory(product.category)
 }
 
+configFooterExpandInfo()
 renderProduct()
