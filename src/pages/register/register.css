@@ -1,14 +1,13 @@
 header {
     margin: 0;
 }
-
+body{
+    height: auto;
+}
 main {
+    margin: 20px auto;
     width: 100%;
     height: 92%;
-    background-image: url(../../assets/img/imgPage.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
 }
@@ -21,7 +20,8 @@ section {
     align-items: flex-end;
 }
 
-div {
+.div {
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -29,10 +29,16 @@ div {
 }
 
 form {
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 13px;
+}
+.divider {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .footerLogin {
@@ -58,8 +64,17 @@ form {
         justify-content: center;
     }
     section {
-        width: 30%;
-        height: 500px;
+        width: 40%;
+        height: 99%;
+        display: flex;
+        align-items: center;
     }
-    
+    form{
+        gap: 4px;
+    }
+    .divider {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
 }

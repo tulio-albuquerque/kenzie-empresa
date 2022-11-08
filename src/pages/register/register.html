@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../styles/header.css">
     <link rel="stylesheet" href="../../styles/toastfy.css">
     <link rel="stylesheet" href="./register.css">
-    <title>nome    </title>
+    <title>nome </title>
 </head>
 
 <body>
@@ -21,9 +21,8 @@
         <div class="header container">
             <div class="logo">
                 <div>
-                    <img src="../../assets/icons/favIcons.svg" alt="">
-                    <h1 class="fontOneSemibold">nome
-                                </h1>
+                    <img src="" alt="">
+                    <h1 class="fontOneSemibold">nome</h1>
                 </div>
                 <button class="bntMore"></button>
             </div>
@@ -35,19 +34,30 @@
     </header>
     <main>
         <section>
-            <div class="container">
+            <div class="container div">
                 <h2 class="fontFiveBold">Cadastre-se</h2>
                 <form id="register">
-                    <input id="username" type="text" placeholder="Seu nome" class="entry fontFourRegular">
+                    <h1 class="fontFourRegular">Nome</h1>
+                    <div class="divider">
+                        <input id="firstname" type="text" placeholder="Seu primeiro nome" class="entry fontFourRegular">
+                        <input id="lastname" type="text" placeholder="Seu sobrenome " class="entry fontFourRegular">
+                    </div>
+                    <h1 class="fontFourRegular">Nome de Usuario</h1>
+                    <input id="username" type="text" placeholder="Seu username" class="entry fontFourRegular">
+                    <h1 class="fontFourRegular">E-mail</h1>
                     <input id="email" type="email" placeholder="Seu e-mail" class="entry fontFourRegular">
+                    <h1 class="fontFourRegular">Senha</h1>
                     <input id="password" type="password" placeholder="Sua Senha" class="entry fontFourRegular">
-                    
-                    <button class="bntTwo fontTwoBold" id="bntRegister" type="submit">Cadastre-se</button>
+                    <h1 class="fontFourRegular">Endereço</h1>
+                    <div class="divider">
+                        <input id="city" type="text" placeholder="Seu cidade" class="entry fontFourRegular">
+                        <input id="street" type="text" placeholder="Seu rua" class="entry fontFourRegular">
+                        <input id="number" type="text" placeholder="Seu CEP" class="entry fontFourRegular">
+                    </div>
+                    <h1 class="fontFourRegular">Telefone</h1>
+                    <input id="phone" type="text" placeholder="Seu telefone" class="entry fontFourRegular">
                 </form>
-                <div class="footerLogin">
-                    <p class="fontFourRegular">ou</p>
-                    <a href="../../index.html"><button class="bntOne fontTwoBold">Retornar</button></a>
-                </div>
+                <button class="bntTwo fontTwoBold" id="bntRegister" type="submit">Cadastre-se</button>
             </div>
         </section>
     </main>

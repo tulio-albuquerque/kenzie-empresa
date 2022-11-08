@@ -1,13 +1,12 @@
-import { sherad } from "../../scripts/form.js";
-import { BntOpen } from "../../scripts/header.js";
+
+import { shared } from "../../scripts/forms.js";
 import { toastfy } from "../../scripts/toastfy.js";
 
-BntOpen()
 const BntRegister = document.querySelector('#bntRegister');
 
 BntRegister.addEventListener('click', async (event) => {
     event.preventDefault()
-    const validation = await sherad()
+    const validation = await shared()
     if (validation == true) {
         toastfy("Sucesso!", 'Cadastro feito com sucesso ,vamos entrar?')
         setTimeout(() => {

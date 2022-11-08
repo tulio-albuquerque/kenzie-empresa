@@ -1,7 +1,7 @@
 .toastfy{
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -180px;
     width: 100%;
     color: var(--color-gray-800);
     border-radius: 10px;
