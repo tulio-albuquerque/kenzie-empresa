@@ -17,20 +17,25 @@ const renderProductsByCategory = async (category) => {
 }
 
 const renderProduct = async () => {
-  const product = await getSingleProduct(1)
-  const _infos = document.querySelectorAll("[class^=product]")
-  _infos.forEach((_info) => {
-    const field = _info.classList[0].substring(8)
-    if(field == "image") {
-      _info.src = product[field]
-    } else if(field == "title") {
-      _info.innerText = product[field].split(" - ")[0]
-    } else {
-      _info.innerText = product[field]
-    }
-  })
+  const id = localStorage.getItem("productId")
+  if(id) {
+    const product = await getSingleProduct(id)
+    const _infos = document.querySelectorAll("[class^=product]")
+    _infos.forEach((_info) => {
+      const field = _info.classList[0].substring(8)
+      if(field == "image") {
+        _info.src = product[field]
+      } else if(field == "title") {
+        _info.innerText = product[field].split(" - ")[0]
+      } else if(field == "price") {
+        _info.innerText = `R$ ${product[field]}`
+      } else {
+        _info.innerText = product[field]
+      }
+    })
 
-  renderProductsByCategory(product.category)
+    renderProductsByCategory(product.category)
+  }
 }
 
 configFooterExpandInfo()
