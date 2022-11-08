@@ -1,6 +1,6 @@
 import { login } from "./api.js";
 
-export async function sherad() {
+export async function shared() {
     const form = document.querySelector("form");
     const elements = [...form.elements]
     const body = {}

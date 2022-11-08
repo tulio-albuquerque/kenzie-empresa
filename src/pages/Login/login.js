@@ -1,10 +1,10 @@
-import { sherad } from "../../../scripts/forms.js"
+import { shared } from "../../../scripts/forms.js"
 import { toastfy } from "../../../scripts/toastfy.js"
 const initial = () => {
     const bntLogin = document.querySelector('#submit')
     bntLogin.addEventListener('click', async (e) => {
         e.preventDefault()
-        const valid = await sherad()
+        const valid = await shared()
         if (valid) {
             toastfy("Sucesso!", "Login feito com sucesso Agarde um instante enquanto te direcionamos")
             setTimeout(() => {
