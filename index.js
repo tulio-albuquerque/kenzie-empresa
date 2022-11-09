@@ -1,4 +1,5 @@
 import { addProductToCart, getAllCategories, getAllProducts, getSingleUser, listProductsInCategory } from "./src/scripts/api.js";
+import { darkmode } from "./src/scripts/darkMode.js";
 import { configFooterExpandInfo } from "./src/scripts/footer.js";
 import { hideToast, showToast } from "./src/scripts/toasts.js";
 
@@ -128,3 +129,5 @@ getSingleUser(1)
 async function userInfo(object) {
 
 }
+
+darkmode()
