@@ -3,7 +3,7 @@ import { configFooterExpandInfo } from "./src/scripts/footer.js";
 
 configFooterExpandInfo()
 
-let allProducts = await getAllProducts()
+const allProducts = await getAllProducts()
 let allCategories = await getAllCategories()
 
 
@@ -21,8 +21,6 @@ function productsCards(array) {
     const cardsContainer = document.getElementById('listProducts')
     cardsContainer.innerHTML = ""
     array.forEach((product) => {
-
-
 
         let cardContent = document.createElement("li")
         let productImgContainer = document.createElement('figure')
