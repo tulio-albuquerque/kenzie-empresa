@@ -1,35 +1,14 @@
 import { saveLocal } from "./localstorage.js"
 
-const fakeStore = "https://fakestoreapi.com"
+const fakeshop = "http://api.fakeshop-api.com"
 
-const baseURL = "http://api.fakeshop-api.com"
+const fakestoreapi = "https://fakestoreapi.com"
 
 
-
-export const getSingleProduct = async (id) => {
-    const response = await fetch(`${baseURL}/products/${id}`)
-        .then(res => res.json())
-
-    return response
-}
-
-export const getAllProducts = async () => {
-  const response = await fetch(`${fakeStore}/products/`)
-        .then(res => res.json())
-
-  return response
-}
-
-export const listProductsInCategory = async (category) => {
-    const response = await fetch(`${baseURL}/products/category/${category}`)
-        .then(res => res.json())
-
-    return response
-}
 
 export async function login(user) {
   console.log(user)
-    const loginUser = await fetch(`${baseURL}/users/signin`, {
+    const loginUser = await fetch(`${fakeshop}/users/signin`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
@@ -48,24 +27,51 @@ export async function login(user) {
 
 export async function register(user) {
 
-    const loginUser = await fetch(`${baseURL}/users/signup`, {
+    const loginUser = await fetch(`${fakeshop}/users/signup`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(user)
     })
-    console.log(loginUser);
     if (loginUser.ok) {
         return true
     } else {
         return false
     }
 }
+
+export async function getAllProducts(){
+  try{
+    const products = await fetch(`${fakestoreapi}/products`, {
+      method: "GET"
+    });
+    const productsInfo = await products.json()
+    return productsInfo
+  }
+  catch(error){
+    console.log(error)
+  }
+}
+
+export const getSingleProduct = async (id) => {
+    const response = await fetch(`${fakestoreapi}/products/${id}`)
+        .then(res => res.json())
+
+    return response
+}
+
+export const listProductsInCategory = async (category) => {
+    const response = await fetch(`${fakestoreapi}/products/category/${category}`)
+        .then(res => res.json())
+    return response
+}
   
 export async function getAllCategories(){
     try{
-      const categories = await fetch(`${baseURL}/products/categories`, {
+
+      const categories = await fetch(`${fakestoreapi + "/products/categories"}`, {
+
         method: "GET"
       });
       let categoryList = await categories.json()
@@ -78,7 +84,7 @@ export async function getAllCategories(){
   
   export async function getSingleUser(id){
     try{
-      const user = await fetch(`${baseURL}/users/${id}`, {
+      const user = await fetch(`${fakestoreapi + `/users/${id}`}`, {
         method: "GET"
       });
       let userInfo = await user.json()
