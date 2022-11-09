@@ -5,22 +5,22 @@ Figma Base: https://www.figma.com/community/file/1165340986577131391
 
 [x]Mobile First.
 [x]Página Login
-[]Estilização
+[x]Estilização
 []Form de login
 []Uso da API
-[]Redirecionamento para a Home
+[x]Redirecionamento para a Home
 []Página Cadastro
 []Mesma Estilização da Página de Login
-[]Form de cadastro
-[]Uso da API
-[]*Redirecionamento para a página de login
-[]Página Home com lista produtos
-[]Header com botão de Login, Cadastro e Carrinho
+[x]Form de cadastro
+[x]Uso da API
+[x]*Redirecionamento para a página de login
+[x]Página Home com lista produtos
+[x]Header com botão de Login, Cadastro e Carrinho
 []Barra de Pesquisa
 []Main com botões de filtro
 
 
-[]Renderização dos cards de cada produto
+[x]Renderização dos cards de cada produto
 []Botão de adicionar ao carrinho no card
 []Clicando no card, redireciona para a página com os detalhes do produto
 []Página detalhe de produto
