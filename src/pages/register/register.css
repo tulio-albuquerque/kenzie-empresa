@@ -1,27 +1,24 @@
 header {
     margin: 0;
 }
-body{
-    height: auto;
-}
+
 main {
-    margin: 20px auto;
     width: 100%;
-    height: 92%;
+    height: 64%;
     display: flex;
     align-items: center;
 }
 
 section {
-    height: 70%;
+    height: 60%;
     width: 100%;
     background-color: var(--color-grey-600);
     display: flex;
     align-items: flex-end;
-}
+}   
 
-.div {
-    margin: 20px auto;
+
+div {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -29,52 +26,23 @@ section {
 }
 
 form {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 13px;
 }
-.divider {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
 
-.footerLogin {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+#bntRegister{
+    margin: 20px 0 20px 0;
 }
-
-.footerLogin>a {
-    width: 100%;
-}
-
-.footerLogin>a>button {
-    width: 100%;
-}
-
 @media (min-width:700px) {
     main{
-        height: 100%;
+        height: 80%;
         justify-content: center;
     }
     section {
-        width: 40%;
-        height: 99%;
-        display: flex;
-        align-items: center;
+        width: 35%;
+        height: 70%;
     }
-    form{
-        gap: 4px;
-    }
-    .divider {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-    }
+    
 }
