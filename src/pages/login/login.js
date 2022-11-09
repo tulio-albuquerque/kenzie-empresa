@@ -1,6 +1,6 @@
 import { configFooterExpandInfo } from "../../scripts/footer.js"
 import { shared } from "../../scripts/forms.js"
-import { showToast } from "../../scripts/toasts.js"
+import { hideToast, showToast } from "../../scripts/toasts.js"
 const initial = () => {
     configFooterExpandInfo()
     const bntLogin = document.querySelector('form')
@@ -14,11 +14,7 @@ const initial = () => {
             }, 2000);
         } else {
             showToast("alert" , 'Email ou senha invalido!')
-            const form = document.querySelector('form');
-            form.addEventListener('click', () => {
-                const toastfy = document.querySelector('.toastfy');
-                toastfy.remove()
-            }, { once: true })
+            setTimeout(()=>{hideToast()}, 3000)
         }
     })
 }
