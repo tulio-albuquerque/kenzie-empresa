@@ -4,7 +4,12 @@ const fakeshop = "http://api.fakeshop-api.com"
 
 const fakestoreapi = "https://fakestoreapi.com"
 
+// export const listProductsInCategory = async (category) => {
+//     const response = await fetch(`${fakeStore}/products/category/${category}`)
+//         .then(res => res.json())
 
+//     return response
+// }
 
 export async function login(user) {
   console.log(user)

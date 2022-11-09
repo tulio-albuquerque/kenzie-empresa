@@ -43,6 +43,15 @@ header {
     height: 80%;
 }
 
+
+.nav {
+    display: none;
+    background-color: var(--color-grey-700);
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
 .open {
     display: flex;
     flex-direction: row;
@@ -51,18 +60,34 @@ header {
     top: 60px;
     left: 0;
 }
-
-.nav {
-    display: none;
-    background-color: var(--color-grey-700);
-    width: 95%;
-    height: auto;
-    padding: 5px;
-}
+.containerBar {
+    background-color: transparent;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto;
+  }
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--color-grey-500);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
 
 
 @media (min-width:700px) {
-    .logo>button {
+    .logo>article {
         display: none;
     }
 
@@ -89,4 +114,5 @@ header {
 
     }
 
+    
 }

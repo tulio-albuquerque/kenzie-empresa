@@ -1,6 +1,9 @@
-import { getSingleProduct, listProductsInCategory } from "../../scripts/api.js"
+import { addProductToCart, getSingleProduct, listProductsInCategory } from "../../scripts/api.js"
 import { configFooterExpandInfo } from "../../scripts/footer.js"
+import { bntOpen } from "../../scripts/header.js"
+import { hideToast, showToast } from "../../scripts/toasts.js"
 
+bntOpen()
 const renderProductsByCategory = async (category) => {
   const products = await listProductsInCategory(category)
   const _related = document.querySelector(".related")
@@ -32,6 +35,22 @@ const renderProduct = async () => {
       } else {
         _info.innerText = product[field]
       }
+    })
+
+    const _addCart = document.querySelector(".add-cart")
+    _addCart.addEventListener("click", () => {
+      let cart = []
+      const _cartJson = localStorage.getItem("cart")
+      const _cart = JSON.parse(_cartJson)
+      if(_cart) {
+        cart = [..._cart]
+      }
+      cart.push(product)
+      const data = { id }
+      addProductToCart(data)
+      localStorage.setItem("cart", JSON.stringify(cart))
+      showToast("success", 'Produto adicionado')
+      setTimeout(hideToast, 1000)
     })
 
     renderProductsByCategory(product.category)

@@ -1,9 +1,11 @@
 import { addProductToCart, getAllCategories, getAllProducts, getSingleUser, listProductsInCategory } from "./src/scripts/api.js";
 import { configFooterExpandInfo } from "./src/scripts/footer.js";
+import { bntOpen } from "./src/scripts/header.js";
 import { hideToast, showToast } from "./src/scripts/toasts.js";
 
 
 const renderpage = async () => {
+    bntOpen()
     const allProducts = await getAllProducts()
     const allCategories = await getAllCategories()
     productsCards(allProducts)
@@ -23,7 +25,6 @@ function productsCards(array) {
     const cardsContainer = document.getElementById('listProducts')
     cardsContainer.innerHTML = ""
     array.forEach((product) => {
-
         let cardContent = document.createElement("li")
         let productImgContainer = document.createElement('figure')
         let productImg = document.createElement("img")
@@ -31,7 +32,6 @@ function productsCards(array) {
         let productMainInfo = document.createElement('div')
         let productName = document.createElement("p")
         let productCategory = document.createElement("p")
-        let productDescription = document.createElement("p")
         let productBuy = document.createElement("div")
         let productPrice = document.createElement("p")
         let addCartButton = document.createElement("button")
@@ -43,7 +43,6 @@ function productsCards(array) {
             window.location.href = "/src/pages/product/product.html"
         })
 
-
         cardContent.classList = "card"
         productMarketDescription.classList = "productDescription container"
         productMainInfo.classList = "productInfo"
@@ -51,24 +50,37 @@ function productsCards(array) {
         productCategory.classList = "bntFive fontFourSemibold productCategory"
         productPrice.classList = "fontOneSemibold"
 
-
-
         addCartButton.id = product.id
         addCartButton.innerText = "Adicionar ao Carrinho"
         addCartButton.classList = "bntTree"
-        addCartButton.addEventListener('click', () => {
-            let userId = localStorage.getItem("User")
-            if (userId) {
+        addCartButton.addEventListener('click', (event) => {
+            const _button = event.target
+            const id = _button.id
+            let cart = []
+            let json = localStorage.getItem("authorization")
+            let user = JSON.parse(json)
+            let _cartJson = localStorage.getItem("cart")
+            let _cart = JSON.parse(_cartJson)
+            if(_cart) {
+                cart = [..._cart]
+            }
+            if(user.token) {
                 let today = new Date().toLocaleDateString()
-                const body = {
-                    userId: userId,
-                    date: today,
-                    products: [{ productId: product.id, quantity: 1 }]
+                const findProduct = cart.findIndex((item) => item.id == id)
+                if(findProduct == -1) {
+                    const body = {
+                        "id": id
+                    }
+                    cart.push(product)
+                    localStorage.setItem("cart", JSON.stringify(cart))
+                    addProductToCart(body)
+                    showToast("success", 'Produto adicionado')
+                    setTimeout(hideToast, 1000)
+                } else {
+                    showToast("alert", 'Produto já adicionado')
+                    setTimeout(hideToast, 1000)
                 }
-                addProductToCart(body)
-                showToast("success", 'Cadastro feito com sucesso ,vamos entrar?')
-                setTimeout()
-            } else {
+            } else {        
                 showToast("alert", 'Favor fazer o login')
                 setTimeout(hideToast, 1000)
             }
@@ -78,7 +90,6 @@ function productsCards(array) {
         productName.innerText = product.title
         productCategory.innerText = product.category
         productPrice.innerText = `R$:${product.price}`
-        productDescription = product.description
 
         productMainInfo.append(productName, productCategory)
         productImgContainer.append(productImg)

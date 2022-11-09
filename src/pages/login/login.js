@@ -1,7 +1,9 @@
 import { configFooterExpandInfo } from "../../scripts/footer.js"
 import { shared } from "../../scripts/forms.js"
 import { hideToast, showToast } from "../../scripts/toasts.js"
+import { bntOpen} from "../../scripts/header.js"
 const initial = () => {
+    bntOpen()
     configFooterExpandInfo()
     const bntLogin = document.querySelector('form')
     bntLogin.addEventListener('submit', async (e) => {
