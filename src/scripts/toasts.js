@@ -3,7 +3,7 @@ export const showToast = (status, message) => {
   const _toast = document.querySelector(".toast")
   const _message = document.querySelector(".toast-message")
   _message.innerText = message
-  _toast.classList.add(status)
+  _toast.classList = `toast ${status}`
   _toastWrapper.classList.add("show-toast")
 }
 
