@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/assets/icons/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/globalStyles.css">
     <link rel="stylesheet" href="./src/styles/buttons.css">
@@ -13,18 +14,25 @@
     <link rel="stylesheet" href="./src/styles/inputs.css">
     <link rel="stylesheet" href="./src/styles/modal.css">
     <link rel="stylesheet" href="./src/styles/toastfy.css">
+    <link rel="stylesheet" href="./src/styles/toasts.css">
     <link rel="stylesheet" href="./index.css">
     <title>Kenzie Store</title>
 </head>
-<body>
-    <header class="header">
-        <nav class="container homeNav">
-            <img src="" alt="Logo da Empresa">
-        <div id="cart">
-            <img class="cart" src="./src/assets/icons/cart-shopping.svg" alt="Carrinho">
-        </div>
-        
-        </nav>
+  <body>
+    <header>
+      <div class="header container">
+          <div class="logo">
+              <div>
+                  <img id="logo" src="./src/assets/icons/logo.svg" alt="">
+                  <h1 class="fontOneSemibold">Kenzie Store</h1>
+              </div>
+              <button class="bntMore"></button>
+          </div>
+          <div class="nav">
+            <a href="./src/pages/login/login.html"><button class="fontTwoBold bntOne">login</button></a>
+              <a href="../../../index.html" id="cart" class="bntCart"></a>
+          </div>
+      </div>
     </header>
     <main id="main" class="container">
         <div class="filterButtonContainer">
@@ -85,7 +93,12 @@
             <span class="copyright">Copyright @ 2022</span>
           </div>
         </div>
-      </footer>
+    </footer>
+    <div class="toast-wrapper" id="toast">
+      <div class="toast">
+        <span class="toast-message"></span>
+      </div>
+    </div>
     <script type="module" src="/index.js"></script>
-</body>
+  </body>
 </html>

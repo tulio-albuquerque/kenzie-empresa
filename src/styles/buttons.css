@@ -2,6 +2,14 @@ button {
     cursor: pointer;
     padding: 0px 22px;
 }
+.bntCart{
+    width: 28px;
+    height: 28px;
+    background-image: url(../assets/icons/cart-shopping.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+}
 
 .bntOne {
     height: 48px;

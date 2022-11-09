@@ -1,7 +1,8 @@
 
+import { configFooterExpandInfo } from "../../scripts/footer.js";
 import { shared } from "../../scripts/forms.js";
 import { toastfy } from "../../scripts/toastfy.js";
-
+configFooterExpandInfo()
 const BntRegister = document.querySelector('form');
 
 BntRegister.addEventListener('submit', async (event) => {
