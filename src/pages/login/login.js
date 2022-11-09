@@ -9,9 +9,9 @@ const initial = () => {
         const valid = await shared()
         if (valid) {
             toastfy("Sucesso!", "Login feito com sucesso Agarde um instante enquanto te direcionamos")
-            setTimeout(() => {
-                window.location.replace('../../../index.html')
-            }, 2000);
+            // setTimeout(() => {
+            //     window.location.replace('../../../index.html')
+            // }, 2000);
         } else {
             toastfy("Erro!" , 'Email ou senha invalido!')
             const form = document.querySelector('form');

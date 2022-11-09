@@ -17,7 +17,8 @@ export const listProductsInCategory = async (category) => {
 }
 
 export async function login(user) {
-    const loginUser = await fetch(`${baseURL}/auth/login`, {
+  console.log(user)
+    const loginUser = await fetch(`${baseURL}/users/signin`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
@@ -25,8 +26,6 @@ export async function login(user) {
         body: JSON.stringify(user)
     })
     fetch('https://fakestoreapi.com/users')
-    .then(res=>res.json())
-    .then(json=>console.log(json))
     if (loginUser.ok) {
         const response = await loginUser.json()
         saveLocal(response)
