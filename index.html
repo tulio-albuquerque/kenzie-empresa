@@ -14,10 +14,11 @@
     <link rel="stylesheet" href="./src/styles/inputs.css">
     <link rel="stylesheet" href="./src/styles/modal.css">
     <link rel="stylesheet" href="./src/styles/toastfy.css">
+    <link rel="stylesheet" href="./src/styles/toasts.css">
     <link rel="stylesheet" href="./index.css">
     <title>Kenzie Store</title>
 </head>
-<body>
+  <body>
     <header>
       <div class="header container">
           <div class="logo">
@@ -29,10 +30,10 @@
           </div>
           <div class="nav">
             <a href="./src/pages/login/login.html"><button class="fontTwoBold bntOne">login</button></a>
-              <a href="../../../index.html" class="bntCart"></a>
+              <a href="../../../index.html" id="cart" class="bntCart"></a>
           </div>
       </div>
-  </header>
+    </header>
     <main id="main" class="container">
         <div class="filterButtonContainer">
             <button id="noFilter" class="bntTwo">Todos</button>
@@ -44,8 +45,8 @@
         <ul id="listProducts" class="cardsContainer"></ul>
     </main>
     <footer>
-        <div class="footer container">
-          <div class="footer-info">
+      <div class="footer container">
+        <div class="footer-info">
             <div class="footer-section">
               <div class="footer-section__header">
                 <span>Logo</span>
@@ -92,7 +93,12 @@
             <span class="copyright">Copyright @ 2022</span>
           </div>
         </div>
-      </footer>
+    </footer>
+    <div class="toast-wrapper" id="toast">
+      <div class="toast">
+        <span class="toast-message"></span>
+      </div>
+    </div>
     <script type="module" src="/index.js"></script>
-</body>
+  </body>
 </html>

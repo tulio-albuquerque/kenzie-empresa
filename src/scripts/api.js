@@ -1,12 +1,23 @@
 import { saveLocal } from "./localstorage.js"
 
+const fakeStore = "https://fakestoreapi.com"
+
 const baseURL = "http://api.fakeshop-api.com"
+
+
 
 export const getSingleProduct = async (id) => {
     const response = await fetch(`${baseURL}/products/${id}`)
         .then(res => res.json())
 
     return response
+}
+
+export const getAllProducts = async () => {
+  const response = await fetch(`${fakeStore}/products/`)
+        .then(res => res.json())
+
+  return response
 }
 
 export const listProductsInCategory = async (category) => {
@@ -51,24 +62,10 @@ export async function register(user) {
         return false
     }
 }
-
-
-export async function getAllProducts(){
-    try{
-      const products = await fetch(`${baseURL + "/products"}`, {
-        method: "GET"
-      });
-      let productsInfo = await products.json()
-      return productsInfo
-    }
-    catch(error){
-      console.log(error)
-    }
-  }
   
-  export async function getAllCategories(){
+export async function getAllCategories(){
     try{
-      const categories = await fetch(`${baseURL + "/products/categories"}`, {
+      const categories = await fetch(`${baseURL}/products/categories`, {
         method: "GET"
       });
       let categoryList = await categories.json()
@@ -81,7 +78,7 @@ export async function getAllProducts(){
   
   export async function getSingleUser(id){
     try{
-      const user = await fetch(`${baseURL + `/users/${id}`}`, {
+      const user = await fetch(`${baseURL}/users/${id}`, {
         method: "GET"
       });
       let userInfo = await user.json()

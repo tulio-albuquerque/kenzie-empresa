@@ -22,3 +22,9 @@ export function toastfy(title,mensage) {
     body.append(div)
 
 }
+
+export const hideToast = () => {
+    const _body = document.querySelector("body")
+    const _toast = document.querySelector(".toastfy")
+    _toast.remove()
+}
