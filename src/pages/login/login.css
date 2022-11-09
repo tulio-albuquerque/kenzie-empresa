@@ -10,6 +10,7 @@ main {
 }
 
 section {
+    box-shadow: -1px 1px 17px 3px var(--color-grey-400);
     height: 60%;
     width: 100%;
     background-color: var(--color-grey-600);
@@ -58,7 +59,7 @@ form {
     }
     section {
         width: 40%;
-        height: 80%;
+        height: 60%;
     }
     
 }

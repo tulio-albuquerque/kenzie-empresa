@@ -2,21 +2,22 @@ import { addProductToCart, getAllCategories, getAllProducts, getSingleUser, list
 import { configFooterExpandInfo } from "./src/scripts/footer.js";
 import { hideToast, showToast } from "./src/scripts/toasts.js";
 
-configFooterExpandInfo()
 
-const allProducts = await getAllProducts()
-let allCategories = await getAllCategories()
+const renderpage = async () => {
+    const allProducts = await getAllProducts()
+    const allCategories = await getAllCategories()
+    productsCards(allProducts)
+    renderFilterButtons(allCategories)
+    getSingleUser(1)
+    configFooterExpandInfo()
+}
+renderpage()
 
 
 const cart = document.getElementById('cart')
 cart.addEventListener('click', () => {
     window.location.href = "/src/pages/cart/cart.html"
 })
-const noFilter = document.getElementById('noFilter')
-noFilter.addEventListener('click', () => {
-    productsCards(allProducts)
-})
-
 
 function productsCards(array) {
     const cardsContainer = document.getElementById('listProducts')
@@ -57,17 +58,17 @@ function productsCards(array) {
         addCartButton.classList = "bntTree"
         addCartButton.addEventListener('click', () => {
             let userId = localStorage.getItem("User")
-            if(userId) {
+            if (userId) {
                 let today = new Date().toLocaleDateString()
                 const body = {
                     userId: userId,
                     date: today,
                     products: [{ productId: product.id, quantity: 1 }]
                 }
-                addProductToCart(body)        
+                addProductToCart(body)
                 showToast("success", 'Cadastro feito com sucesso ,vamos entrar?')
                 setTimeout()
-            } else {        
+            } else {
                 showToast("alert", 'Favor fazer o login')
                 setTimeout(hideToast, 1000)
             }
@@ -84,17 +85,14 @@ function productsCards(array) {
         productBuy.append(productPrice, addCartButton)
         productMarketDescription.append(productMainInfo, productBuy)
         cardContent.append(productImgContainer, productMarketDescription)
-        //cardContent.append(productImg, productMarketDescription)
         cardsContainer.append(cardContent)
 
     })
 
 }
-productsCards(allProducts)
-
-
 function renderFilterButtons(array) {
-    const main = document.getElementsByClassName('filterButtonContainer')[0]
+    const main = document.querySelector('nav')
+    main.innerHTML = '<button id="noFilter" class="bntTwo">Todos</button>'
     array.forEach((category) => {
         let button = document.createElement('button')
         button.innerText = category
@@ -103,17 +101,18 @@ function renderFilterButtons(array) {
         button.addEventListener('click', () => {
             categoryList(category)
         })
-        main.appendChild(button)
+        main.append(button)
     })
+    bntNofilter()
 }
-renderFilterButtons(allCategories)
 
 async function categoryList(category) {
     let categoryProducts = await listProductsInCategory(category)
     productsCards(categoryProducts)
 }
-
-getSingleUser(1)
-async function userInfo(object) {
-
+const bntNofilter = () => {
+    const noFilter = document.getElementById('noFilter')
+    noFilter.addEventListener('click', () => {
+        productsCards(allProducts)
+    })
 }

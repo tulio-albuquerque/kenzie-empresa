@@ -12,6 +12,7 @@ main {
 section {
     height: 60%;
     width: 100%;
+    box-shadow: -1px 1px 17px 3px var(--color-grey-400);
     background-color: var(--color-grey-600);
     display: flex;
     align-items: flex-end;
@@ -42,7 +43,7 @@ form {
     }
     section {
         width: 35%;
-        height: 70%;
+        height: 60%;
     }
     
 }
