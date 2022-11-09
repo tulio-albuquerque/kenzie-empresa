@@ -1,12 +1,13 @@
 button {
     cursor: pointer;
     padding: 0px 22px;
-    
+
 }
+
 .bntOne {
     height: 48px;
     background: var(--color-grey-800);
-    border:transparent;
+    border: transparent;
     color: var(--color-brand-100);
 }
 
@@ -27,13 +28,24 @@ button {
 
 .bntTree {
     height: 48px;
+    width: 100%;
     background: var(--color-brand-300);
     border: 1px solid var(--color-brand-300);
     color: var(--color-grey-800);
 }
+
 .bntFour {
     height: 48px;
     background: var(--color-grey-800);
     border: 1px solid var(--color-brand-300);
     color: var(--color-brand-300);
+}
+
+.bntFive {
+    padding: 1px;
+    background: var(--color-grey-800);
+    border: 1px solid var(--color-brand-100);
+    color: var(--color-brand-100);
+    display: flex;
+    align-items: center
 }
