@@ -1,3 +1,4 @@
+import { darkmode } from "../../scripts/darkMode.js"
 import { configFooterExpandInfo } from "../../scripts/footer.js"
 import { shared } from "../../scripts/forms.js"
 import { hideToast, showToast } from "../../scripts/toasts.js"
@@ -21,3 +22,4 @@ const initial = () => {
 
 initial()
 
+darkmode()

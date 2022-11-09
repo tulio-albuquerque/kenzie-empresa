@@ -89,3 +89,12 @@ button {
     border: none;
     cursor: pointer;
 }
+
+.dark-mode-button{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    height: 7vh;
+    border-radius: 32px;
+    background-color: var(--color-grey-400);
+}
