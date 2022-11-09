@@ -4,6 +4,8 @@ const fakeshop = "http://api.fakeshop-api.com"
 
 const fakestoreapi = "https://fakestoreapi.com"
 
+
+
 export async function login(user) {
   console.log(user)
     const loginUser = await fetch(`${fakeshop}/users/signin`, {
@@ -65,9 +67,11 @@ export const listProductsInCategory = async (category) => {
     return response
 }
   
-  export async function getAllCategories(){
+export async function getAllCategories(){
     try{
+
       const categories = await fetch(`${fakestoreapi + "/products/categories"}`, {
+
         method: "GET"
       });
       let categoryList = await categories.json()

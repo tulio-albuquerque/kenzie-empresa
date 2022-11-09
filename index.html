@@ -14,10 +14,11 @@
     <link rel="stylesheet" href="./src/styles/inputs.css">
     <link rel="stylesheet" href="./src/styles/modal.css">
     <link rel="stylesheet" href="./src/styles/toastfy.css">
+    <link rel="stylesheet" href="./src/styles/toasts.css">
     <link rel="stylesheet" href="./index.css">
     <title>Kenzie Store</title>
 </head>
-<body>
+  <body>
     <header>
       <div class="header container">
           <div class="logo">
@@ -29,10 +30,11 @@
           </div>
           <div class="nav">
             <a href="./src/pages/login/login.html"><button class="fontTwoBold bntOne">login</button></a>
-              <a id="cart" href="../../../index.html" class="bntCart"></a>
+              <a href="../../../index.html" id="cart" class="bntCart"></a>
+
           </div>
       </div>
-  </header>
+    </header>
     <main id="main" class="container">
         <div class="filterButtonContainer">
             <button id="noFilter" class="bntTwo">Todos</button>
@@ -44,7 +46,7 @@
         <ul id="listProducts" class="cardsContainer"></ul>
     </main>
     <footer>
-        <div class="footer container">
+        <div class="footer">
           <div class="footer-info">
             <div class="footer-section">
               <div class="footer-section__header">
@@ -61,9 +63,9 @@
                 <h6>Shopping and Categories</h6>
               </div>
               <div class="footer-section__body">
-                <span>Men’s Shopping</span>
-                <span>Women’s Shopping</span>
-                <span>Kid’s Shopping</span>
+                <span>Men&lsquo;s Shopping</span>
+                <span>Women&lsquo;s Shopping</span>
+                <span>Kid&lsquo;s Shopping</span>
               </div>
             </div>
             <div class="footer-section">
@@ -82,7 +84,7 @@
                 <h6>Help & Information</h6>
               </div>
               <div class="footer-section__body">
-                <span>FAQ’S</span>
+                <span>FAQ&lsquo;S</span>
                 <span>Shipping</span>
                 <span>Tracking Id</span>
               </div>
@@ -92,7 +94,12 @@
             <span class="copyright">Copyright @ 2022</span>
           </div>
         </div>
-      </footer>
+    </footer>
+    <div class="toast-wrapper" id="toast">
+      <div class="toast">
+        <span class="toast-message"></span>
+      </div>
+    </div>
     <script type="module" src="/index.js"></script>
-</body>
+  </body>
 </html>

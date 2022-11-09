@@ -1,5 +1,6 @@
 import { addProductToCart, getAllCategories, getAllProducts, getSingleUser, listProductsInCategory } from "./src/scripts/api.js";
 import { configFooterExpandInfo } from "./src/scripts/footer.js";
+import { hideToast, showToast } from "./src/scripts/toasts.js";
 
 configFooterExpandInfo()
 
@@ -56,13 +57,20 @@ function productsCards(array) {
         addCartButton.classList = "bntTree"
         addCartButton.addEventListener('click', () => {
             let userId = localStorage.getItem("User")
-            let today = new Date().toLocaleDateString()
-            const body = {
-                userId: userId,
-                date: today,
-                products: [{ productId: product.id, quantity: 1 }]
+            if(userId) {
+                let today = new Date().toLocaleDateString()
+                const body = {
+                    userId: userId,
+                    date: today,
+                    products: [{ productId: product.id, quantity: 1 }]
+                }
+                addProductToCart(body)        
+                showToast("success", 'Cadastro feito com sucesso ,vamos entrar?')
+                setTimeout()
+            } else {        
+                showToast("alert", 'Favor fazer o login')
+                setTimeout(hideToast, 1000)
             }
-            addProductToCart(body)
         })
         productImg.src = product.image
         productImg.alt = product.title
