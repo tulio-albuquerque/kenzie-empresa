@@ -32,6 +32,28 @@ li {
   --font-size-5: 2rem;
 }
 
+.dark-mode:root{
+  --color-brand-100: #f8f8f8;
+  --color-brand-200: #470000;
+  --color-brand-300: #0a3200;
+  --color-grey-800: #15171a;
+  --color-grey-700: #212529;
+  --color-grey-600: #2b2f33;
+  --color-grey-500: #868e96;
+  --color-grey-400: #adb5bd;
+  --color-grey-300: #ced4da;
+  --color-grey-200: #dee2e6;
+  --color-grey-100: #f1f3f5;
+  --font-size-1: 1.5rem;
+  --font-size-2: 1.3rem;
+  --font-size-3: 1.25rem;
+  --font-size-4: 1rem;
+  --font-size-5: 2rem;
+
+  background-color: var(--color-grey-800);
+  color: var(--color-brand-100);
+}
+
 body {
   font-family: 'Inter';
   width: 100%;

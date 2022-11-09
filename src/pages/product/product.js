@@ -1,4 +1,5 @@
 import { addProductToCart, getSingleProduct, listProductsInCategory } from "../../scripts/api.js"
+import { darkmode } from "../../scripts/darkMode.js"
 import { configFooterExpandInfo } from "../../scripts/footer.js"
 import { bntOpen } from "../../scripts/header.js"
 import { hideToast, showToast } from "../../scripts/toasts.js"
@@ -59,3 +60,4 @@ const renderProduct = async () => {
 
 configFooterExpandInfo()
 renderProduct()
+darkmode()
