@@ -1,4 +1,7 @@
 import { addProductToCart, getAllCategories, getAllProducts, getSingleUser, listProductsInCategory } from "./src/scripts/api.js";
+import { configFooterExpandInfo } from "./src/scripts/footer.js";
+
+configFooterExpandInfo()
 
 let allProducts = await getAllProducts()
 let allCategories = await getAllCategories()
