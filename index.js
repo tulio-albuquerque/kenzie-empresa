@@ -22,7 +22,6 @@ function productsCards(array) {
     const cardsContainer = document.getElementById('listProducts')
     cardsContainer.innerHTML = ""
     array.forEach((product) => {
-
         let cardContent = document.createElement("li")
         let productImgContainer = document.createElement('figure')
         let productImg = document.createElement("img")
@@ -42,7 +41,6 @@ function productsCards(array) {
             window.location.href = "/src/pages/product/product.html"
         })
 
-
         cardContent.classList = "card"
         productMarketDescription.classList = "productDescription container"
         productMainInfo.classList = "productInfo"
@@ -50,23 +48,36 @@ function productsCards(array) {
         productCategory.classList = "bntFive fontFourSemibold productCategory"
         productPrice.classList = "fontOneSemibold"
 
-
-
         addCartButton.id = product.id
         addCartButton.innerText = "Adicionar ao Carrinho"
         addCartButton.classList = "bntTree"
-        addCartButton.addEventListener('click', () => {
-            let userId = localStorage.getItem("User")
-            if(userId) {
+        addCartButton.addEventListener('click', (event) => {
+            const _button = event.target
+            const id = _button.id
+            let cart = []
+            let json = localStorage.getItem("authorization")
+            let user = JSON.parse(json)
+            let _cartJson = localStorage.getItem("cart")
+            let _cart = JSON.parse(_cartJson)
+            if(_cart) {
+                cart = [..._cart]
+            }
+            if(user.token) {
                 let today = new Date().toLocaleDateString()
-                const body = {
-                    userId: userId,
-                    date: today,
-                    products: [{ productId: product.id, quantity: 1 }]
+                const findProduct = cart.findIndex((item) => item.id == id)
+                if(findProduct == -1) {
+                    const body = {
+                        "id": id
+                    }
+                    cart.push(product)
+                    localStorage.setItem("cart", JSON.stringify(cart))
+                    addProductToCart(body)
+                    showToast("success", 'Produto adicionado')
+                    setTimeout(hideToast, 1000)
+                } else {
+                    showToast("alert", 'Produto já adicionado')
+                    setTimeout(hideToast, 1000)
                 }
-                addProductToCart(body)        
-                showToast("success", 'Cadastro feito com sucesso ,vamos entrar?')
-                setTimeout()
             } else {        
                 showToast("alert", 'Favor fazer o login')
                 setTimeout(hideToast, 1000)
