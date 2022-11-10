@@ -5,6 +5,7 @@ export const showToast = (status, message) => {
   _message.innerText = message
   _toast.classList = `toast ${status}`
   _toastWrapper.classList.add("show-toast")
+
 }
 
 export const hideToast = () => {

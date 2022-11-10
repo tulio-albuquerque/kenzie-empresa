@@ -13,166 +13,41 @@
     <link rel="stylesheet" href="../../styles/buttons.css">
     <link rel="stylesheet" href="../../styles/header.css">
     <link rel="stylesheet" href="../../styles/footer.css">
-    <link rel="stylesheet" href="../../styles/toastfy.css">
+    <link rel="stylesheet" href="../../styles/toasts.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <div class="header container">
-            <div class="logo">
-                <div>
-                    <img id="logo" src="../../assets/icons/logo.svg" alt="Logo">
-                    <h1 class="fontOneSemibold">Kenzie Store</h1>
-                </div>
-                <article class="containerBar bntMore" >
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </article>
+    <div class="header container">
+        <div class="logo">
+            <div>
+                <img id="logo" src="../../assets/icons/logo.svg" alt="Logo">
+                <h1 class="fontOneSemibold">Kenzie Store</h1>
             </div>
-            <nav>
-                <a href="../../../index.html"><button class="fontTwoBold bntOne">Home</button></a>
-            </nav>
-            <button id="darkMode" class="dark-mode-button">
-                <span>
-                <img id="darkModeImg" class="button-tag" src="" alt="">
-              </span>
-            </button>
+            <article class="containerBar bntMore" >
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </article>
         </div>
-    </header>
+        <div class="nav">
+          <a href="../../../index.html"><button class="fontTwoBold bntOne">Home</button></a>
+        </div>
+        <button id="darkMode" class="dark-mode-button">
+          <span>
+          <img id="darkModeImg" class="button-tag" src="" alt="">
+        </span>
+      </button>
+    </div>
+  </header>
     <main>
         <div class="cart-title">
             <img src="../../assets/icons/🦆 icon _keyboard arrow down_ .png icon _keyboard arrow down_ .png" class="icon" alt="">
             <div class="title-cart">
                 <h1>Cart</h1>
-                <span>4 Item</span>
+                <span id="quantity-products">4 Item</span>
             </div>
         </div>
         <ul class="products">
-            <li class="product">
-                <img src="../../assets/icons/pic-cart-1.png" alt="">
-                <div class="info-product">
-                    <div class="name-price">
-                        <span>white t-shirt</span>
-                        <span>Rp 70.000,00</span>
-                    </div>
-                    <div class="description">
-                        <span>t-shirt</span>
-                        <div class="btns">
-                            <div class="select">
-                                <label>
-                                    <span>Int</span>
-                                </label>
-                                <select id="">
-                                    <option value="S">S</option>
-                                </select>
-                            </div>
-                            <div class="select">
-                                <label>
-                                    <span>Qty</span>
-                                </label>
-                                <select id="">
-                                    <option value="1">1</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="checkout">Checkout</button>
-                </div>
-            </li>
-            <li class="product">
-                <img src="../../assets/icons/pic-cart-1.png" alt="">
-                <div class="info-product">
-                    <div class="name-price">
-                        <span>white t-shirt</span>
-                        <span>Rp 70.000,00</span>
-                    </div>
-                    <div class="description">
-                        <span>t-shirt</span>
-                        <div class="btns">
-                            <div class="select">
-                                <label>
-                                    <span>Int</span>
-                                </label>
-                                <select id="">
-                                    <option value="S">S</option>
-                                </select>
-                            </div>
-                            <div class="select">
-                                <label>
-                                    <span>Qty</span>
-                                </label>
-                                <select id="">
-                                    <option value="1">1</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="checkout">Checkout</button>
-                </div>
-            </li>
-            <li class="product">
-                <img src="../../assets/icons/pic-cart-1.png" alt="">
-                <div class="info-product">
-                    <div class="name-price">
-                        <span>white t-shirt</span>
-                        <span>Rp 70.000,00</span>
-                    </div>
-                    <div class="description">
-                        <span>t-shirt</span>
-                        <div class="btns">
-                            <div class="select">
-                                <label>
-                                    <span>Int</span>
-                                </label>
-                                <select id="">
-                                    <option value="S">S</option>
-                                </select>
-                            </div>
-                            <div class="select">
-                                <label>
-                                    <span>Qty</span>
-                                </label>
-                                <select id="">
-                                    <option value="1">1</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="checkout">Checkout</button>
-                </div>
-            </li>
-            <li class="product">
-                <img src="../../assets/icons/pic-cart-1.png" alt="">
-                <div class="info-product">
-                    <div class="name-price">
-                        <span>white t-shirt</span>
-                        <span>Rp 70.000,00</span>
-                    </div>
-                    <div class="description">
-                        <span>t-shirt</span>
-                        <div class="btns">
-                            <div class="select">
-                                <label>
-                                    <span>Int</span>
-                                </label>
-                                <select id="">
-                                    <option value="S">S</option>
-                                </select>
-                            </div>
-                            <div class="select">
-                                <label>
-                                    <span>Qty</span>
-                                </label>
-                                <select id="">
-                                    <option value="1">1</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="checkout">Checkout</button>
-                </div>
-            </li>
         </ul>
         <button class="checkoutAll">Checkout all</button>
     </main>
@@ -226,6 +101,11 @@
           </div>
         </div>
       </footer>
-    <script src="./scripts.js"></script>
+      <div class="toast-wrapper" id="toast">
+        <div class="toast">
+          <span class="toast-message"></span>
+        </div>
+      </div>
+    <script type="module" src="./cart.js"></script>
 </body>
 </html>
