@@ -39,3 +39,9 @@
     font-size: var(--font-size-5);
     line-height: 150%;
 }
+.fontSixBold {
+    font-style: normal;
+    font-weight: 800;
+    font-size: var(--font-size-5);
+    line-height: 150%;
+}

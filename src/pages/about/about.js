@@ -1,27 +1,20 @@
 import { darkmode } from "../../scripts/darkMode.js"
 import { configFooterExpandInfo } from "../../scripts/footer.js"
-import { shared } from "../../scripts/forms.js"
-import { hideToast, showToast } from "../../scripts/toasts.js"
 import { bntOpen} from "../../scripts/header.js"
+import { saveicon } from "../../scripts/localstorage.js"
 const initial = () => {
     darkmode()
     bntOpen()
     configFooterExpandInfo()
-    const bntLogin = document.querySelector('form')
-    bntLogin.addEventListener('submit', async (e) => {
-        e.preventDefault()
-        const valid = await shared()
-        if (valid) {
-            showToast("success", "Login feito com sucesso Agarde um instante enquanto te direcionamos")
-            setTimeout(() => {
-                window.location.replace('../../../index.html')
-            }, 2000);
-        } else {
-            showToast("alert" , 'Email ou senha invalido!')
-            setTimeout(()=>{hideToast()}, 3000)
-        }
-    })
+    const bntLogin = document.querySelector('figure')
+    console.log(bntLogin);
+    [bntLogin].forEach(imgUser => {
+        imgUser.addEventListener('click',(e) => {
+            const img = e.target
+            saveicon(img.alt)
+            window.location.replace('../creater/creater.html')
+        })
+    });
 }
-
 initial()
 
