@@ -66,7 +66,7 @@ function productsCards(array) {
             if(_cart) {
                 cart = [..._cart]
             }
-            if(user.token) {
+            if(user) {
                 let today = new Date().toLocaleDateString()
                 const findProduct = cart.findIndex((item) => item.id == id)
                 if(findProduct == -1) {
