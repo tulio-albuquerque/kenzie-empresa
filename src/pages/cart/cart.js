@@ -1,7 +1,10 @@
 import { darkmode } from "../../scripts/darkMode.js";
+import { bntOpen } from "../../scripts/header.js";
 import { showToast, hideToast } from "../../scripts/toasts.js";
 darkmode();
 
+darkmode();
+bntOpen()
 function createLiProductCart(product) {
     const ulProducts = document.querySelector(".products");
 

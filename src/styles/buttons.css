@@ -10,6 +10,9 @@ button {
     background-position: center;
     background-size:contain;
 }
+.bntCart.darkmode{
+    background-image: url(../assets/icons/cart-shopping-darkmode.png);
+}
 .bntMore {
     height: 48px;
     width: 38px;
@@ -124,5 +127,5 @@ button {
     padding: 8px;
     height: 7vh;
     border-radius: 32px;
-    background-color: var(--color-grey-400);
+    background-color: var(--color-grey-800-fixed);
 }
