@@ -66,7 +66,7 @@ function productsCards(array) {
             if(_cart) {
                 cart = [..._cart]
             }
-            if(user.token) {
+            if(user) {
                 let today = new Date().toLocaleDateString()
                 const findProduct = cart.findIndex((item) => item.id == id)
                 if(findProduct == -1) {
@@ -126,6 +126,11 @@ async function categoryList(category) {
 const bntNofilter = () => {
     const noFilter = document.getElementById('noFilter')
     noFilter.addEventListener('click', () => {
-        productsCards(allProducts)
+        renderAllProducts()
     })
+}
+
+async function renderAllProducts(){
+    let products = await getAllProducts()
+    productsCards(products)
 }

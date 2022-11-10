@@ -58,6 +58,7 @@ const renderProduct = async () => {
   }
 }
 
+
 configFooterExpandInfo()
 renderProduct()
 darkmode()
