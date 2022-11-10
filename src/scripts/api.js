@@ -1,5 +1,4 @@
 import { saveLocal } from "./localstorage.js"
-
 const fakeshop = "http://api.fakeshop-api.com"
 
 const fakestoreapi = "https://fakestoreapi.com"
