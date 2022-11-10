@@ -1,0 +1,118 @@
+header {
+    background-color: var(--color-grey-700);
+    width: 100%;
+    border-bottom: 1px solid var(--color-grey-200);
+    margin-bottom: 20px;
+    box-shadow: 1px 11px 17px 3px var(--color-grey-400-fixed);
+    -webkit-box-shadow: 1px 11px 17px 3px var(--color-grey-400-fixed);
+    -moz-box-shadow: 1px 11px 17px 3px var(--color-grey-400-fixed);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.logo>div {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5px;
+}
+
+
+#logo {
+    height: 80%;
+}
+
+
+.nav {
+    display: none;
+    background-color: var(--color-grey-700);
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+.open {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.containerBar {
+    background-color: transparent;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto;
+  }
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--color-grey-500);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+
+@media (min-width:700px) {
+    .logo>article {
+        display: none;
+    }
+
+    .logo>div>h1 {
+        width: 100%;
+    }
+
+
+    .header {
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+
+    }
+
+    
+}

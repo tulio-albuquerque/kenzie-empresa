@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/icons/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../../styles/reset.css">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="../../styles/inputs.css">
+    <link rel="stylesheet" href="../../styles/fonts.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/toasts.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="./register.css">
+    <title>Kenzie Store </title>
+</head>
+
+<body>
+    <header>
+        <div class="header container">
+            <div class="logo">
+                <div>
+                    <img id="logo" src="../../assets/icons/logo.svg" alt="">
+                    <h1 class="fontOneSemibold">Kenzie Store</h1>
+                </div>
+                <article class="containerBar bntMore" >
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </article>
+            </div>
+            <div class="nav">
+                <a href="../../../index.html"><button class="fontTwoBold bntOne">Home</button></a>
+                <a href="../Login/login.html"><button class="fontTwoBold bntTwo">login</button></a>
+
+                <button id="darkMode" class="dark-mode-button">
+                  <span>
+                  <img id="darkModeImg" class="button-tag" src="" alt="">
+                </span>
+              </button>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container div">
+                <h2 class="fontFiveBold">Cadastre-se</h2>
+                <form id="register">
+                    <h1 class="fontFourRegular" >E-mail</h1>
+                    <input required id="email" type="email" placeholder="Seu e-mail" class="entry fontFourRegular">
+                    <h1 class="fontFourRegular">Senha</h1>
+                    <input required id="password" type="password" placeholder="Seu telefone" class="entry fontFourRegular">
+                    <button class="bntTwo fontTwoBold" id="bntRegister" type="submit">Cadastre-se</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+          <div class="footer-info">
+            <div class="footer-section">
+              <div class="footer-section__header">
+                <span>Logo</span>
+              </div>
+              <div class="footer-section__body">
+                <span>Address: address</span>
+                <span>Email: email</span>
+                <span>Phone: phone</span>
+              </div>
+            </div>
+            <div class="footer-section">
+              <div class="footer-section__header">
+                <h6>Shopping and Categories</h6>
+              </div>
+              <div class="footer-section__body">
+                <span>Men’s Shopping</span>
+                <span>Women’s Shopping</span>
+                <span>Kid’s Shopping</span>
+              </div>
+            </div>
+            <div class="footer-section">
+              <div class="footer-section__header">
+                <h6>Useful Links</h6>
+              </div>
+              <div class="footer-section__body">
+                <a href="../../../index.html">Homepage</a>
+                <a href="">About Us</a>
+                <a href="">Help</a>
+                <a href="">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <div class="footer-section__header">
+                <h6>Help & Information</h6>
+              </div>
+              <div class="footer-section__body">
+                <span>FAQ’S</span>
+                <span>Shipping</span>
+                <span>Tracking Id</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <span class="copyright">Copyright @ 2022</span>
+          </div>
+        </div>
+      </footer>
+      <div class="toast-wrapper" id="toast">
+        <div class="toast">
+          <span class="toast-message"></span>
+        </div>
+      </div>
+    <script type="module" src="./register.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+#main {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.cardTitle {
+    height: 15vh;
+    overflow-y: hidden;
+}
+
+.homeNav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    gap: 70px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    height: 450px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    margin-bottom: 50px;
+    position: relative;
+    background-color: var(--card-color);
+}
+
+.card:hover {
+    transition: 0.5s ease-in-out;
+    border: 1px solid var(--color-grey-400-fixed);
+    box-shadow: 0px 0px 20px 3px var(--card-shadow);
+}
+
+
+figure {
+    width: 100%;
+    height: 40%;
+    border-radius: 20px 20px 0 0;
+    background-color: var(--color-grey-800-fixed);
+    overflow: hidden;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+figure>img {
+    margin: 0px auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.productInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productCategory {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+}
+
+.productDescription {
+    margin-bottom: 6%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filterButtonContainer {
+    display: flex;
+    gap: 16px;
+    overflow-x: scroll;
+}
+
+.cart {
+    height: 100%;
+    cursor: pointer;
+}
+
+
+@media(min-width: 700px) {
+    .cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 3%;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        height: 500px;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        position: relative;
+        background-color: var(--color-grey-600);
+        border-radius: 20px;
+    }
+
+    .productCategory {
+        position: absolute;
+        bottom: 80px;
+        right: 20px;
+    }
+
+    .filterButtonContainer {
+        height: 50px;
+        display: flex;
+        overflow-x: hidden;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .filterButtonContainer button {
+        transition: 1s ease-in;
+        width: 100%;
+
+    }
+
+    .filterButtonContainer button:hover {
+        transition: 0.5s ease-in-out;
+        background-color: var(--color-grey-600);
+        color: var(--color-brand-100);
+        box-shadow: 0px 0px 20px 3px var(--color-brand-150);
+        font-style: normal;
+        font-weight: 600;
+        font-size: var(--font-size-1);
+        line-height: 150%;
+    }
+}

@@ -1,0 +1,41 @@
+
+.fontOneSemibold {
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--font-size-1);
+    line-height: 150%;
+}
+
+.fontTwoBold {
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--font-size-2);
+    line-height: 150%;
+}
+
+.fontTreeSemibold {
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--font-size-3);
+    line-height: 150%;
+}
+
+.fontFourSemibold {
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--font-size-4);
+    line-height: 150%;
+}
+
+.fontFourRegular {
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--font-size-4);
+    line-height: 150%;
+}
+.fontFiveBold {
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--font-size-5);
+    line-height: 150%;
+}

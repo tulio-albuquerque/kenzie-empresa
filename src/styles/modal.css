@@ -1,0 +1,27 @@
+.pageModal{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-grey-200);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.page{
+    height: 50%;
+    width: 40%;
+    margin: 100px auto;
+    background-color: var(--color-grey-700);
+    padding: 30px;
+}
+.headerModal{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.header>button{
+    height: 100%;
+    width: 10%;
+}

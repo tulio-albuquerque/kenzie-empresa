@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../assets/icons/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../../styles/globalStyles.css">
+  <link rel="stylesheet" href="../../styles/buttons.css">
+  <link rel="stylesheet" href="../../styles/header.css">
+  <link rel="stylesheet" href="../../styles/footer.css">
+  <link rel="stylesheet" href="../../styles/fonts.css">
+  <link rel="stylesheet" href="product.css">
+  <title>Kenzie Store - Detail</title>
+</head>
+<body>
+  <header>
+    <div class="header container">
+        <div class="logo">
+            <div>
+                <img id="logo" src="../../assets/icons/logo.svg" alt="Logo">
+                <h1 class="fontOneSemibold">Kenzie Store</h1>
+            </div>
+            <article class="containerBar bntMore" >
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </article>
+        </div>
+        <div class="nav">
+          <a href="../../../index.html"><button class="fontTwoBold bntOne">Home</button></a>
+        </div>
+        <button id="darkMode" class="dark-mode-button">
+          <span>
+          <img id="darkModeImg" class="button-tag" src="" alt="">
+        </span>
+      </button>
+    </div>
+  </header>
+  <main class="container">
+    <h1 class="product-title">Product Name</h1>
+    <img class="product-image" src="" alt="Produto">
+    <div class="card">
+      <div class="card-info">
+        <span class="product-title">Product Name</span>
+        <span class="product-price">$100</span>
+      </div>
+      <div class="card-actions">
+        <img src="../../assets/icons/heart.svg" alt="favorite">
+        <img src="../../assets/icons/cart-shopping.svg" alt="cart">
+      </div>
+    </div>
+    <button class="add-cart">Adicionar ao Carrinho</button>
+  </main>
+  <section id="same-category">
+    <ul class="related">
+      <li class="related-product">
+        <img src="" alt="">
+      </li>
+    </ul>
+  </section>
+  <script type="module" src="product.js"></script>
+  <footer>
+    <div class="footer">
+      <div class="footer-info">
+        <div class="footer-section">
+          <div class="footer-section__header">
+            <span>Logo</span>
+          </div>
+          <div class="footer-section__body">
+            <span>Address: address</span>
+            <span>Email: email</span>
+            <span>Phone: phone</span>
+          </div>
+        </div>
+        <div class="footer-section">
+          <div class="footer-section__header">
+            <h6>Shopping and Categories</h6>
+          </div>
+          <div class="footer-section__body">
+            <span>Men’s Shopping</span>
+            <span>Women’s Shopping</span>
+            <span>Kid’s Shopping</span>
+          </div>
+        </div>
+        <div class="footer-section">
+          <div class="footer-section__header">
+            <h6>Useful Links</h6>
+          </div>
+          <div class="footer-section__body">
+            <a href="../../../index.html">Homepage</a>
+            <a href="">About Us</a>
+            <a href="">Help</a>
+            <a href="">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <div class="footer-section__header">
+            <h6>Help & Information</h6>
+          </div>
+          <div class="footer-section__body">
+            <span>FAQ’S</span>
+            <span>Shipping</span>
+            <span>Tracking Id</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <span class="copyright">Copyright @ 2022</span>
+      </div>
+    </div>
+  </footer>
+  <div class="toast-wrapper" id="toast">
+    <div class="toast">
+      <span class="toast-message"></span>
+    </div>
+  </div>
+  <script type="module" src="./product.js"></script>
+</body>
+</html>
