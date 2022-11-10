@@ -98,12 +98,12 @@ li {
         height: 400px;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
     }
 
     figure>img {
-        width: 18%;
+        margin-left: 22%;
     }
     .descriptiosTestes {
         margin: 40px auto;

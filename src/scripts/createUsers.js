@@ -32,7 +32,7 @@ export const users = [
     {
         user: "marcele",
         name: "Marcele Montalvão",
-        img: "../assets/marcele.jpg",
+        img: "../assets/img/marcele.jpg",
         redes: {
             linkedin: "www.linkedin.com/in/marcele-montalvao",
             Instagran: "https://www.instagram.com/marcelemontalvao_/",
