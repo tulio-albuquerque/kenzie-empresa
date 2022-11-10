@@ -55,8 +55,13 @@ function createLiProductCart(product) {
         const index = productsCart.findIndex((item)=>{
             return item.id == product.id;
         })
-        const removeItem = productsCart.splice(index, 1);
-        console.log(removeItem);
+        productsCart.splice(index, 1);
+        console.log(productsCart);
+
+        localStorage.setItem("cart", JSON.stringify(productsCart))
+        const ulProducts = document.querySelector(".products");
+        ulProducts.innerHTML = ""
+        renderCarts()
     })
 
     namePrice.append(spanNameProduct, spanPrice);
