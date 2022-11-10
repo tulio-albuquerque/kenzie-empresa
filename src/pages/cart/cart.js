@@ -1,5 +1,6 @@
 import { darkmode } from "../../scripts/darkMode.js";
 import { showToast, hideToast } from "../../scripts/toasts.js";
+darkmode();
 
 function createLiProductCart(product) {
     const ulProducts = document.querySelector(".products");
@@ -47,7 +48,16 @@ function createLiProductCart(product) {
 
     const btnCheckout = document.createElement("button");
     btnCheckout.classList.add("checkout");
-    btnCheckout.innerText = 'Checkout';
+    btnCheckout.innerText = 'Remove';
+    btnCheckout.addEventListener('click', ()=> {
+        const productsCart = JSON.parse(localStorage.getItem('cart'));
+        
+        const index = productsCart.findIndex((item)=>{
+            return item.id == product.id;
+        })
+        const removeItem = productsCart.splice(index, 1);
+        console.log(removeItem);
+    })
 
     namePrice.append(spanNameProduct, spanPrice);
     labelSpanNameSelectQty.appendChild(spanNameSelectQty);
@@ -89,4 +99,3 @@ function payment() {
 payment();
 renderCarts();
 renderQuantity();
-darkmode();
