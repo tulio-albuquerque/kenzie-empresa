@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +11,10 @@
     <link rel="stylesheet" href="../../styles/fonts.css">
     <link rel="stylesheet" href="../../styles/buttons.css">
     <link rel="stylesheet" href="../../styles/header.css">
-    <link rel="stylesheet" href="../../styles/toasts.css">
     <link rel="stylesheet" href="../../styles/footer.css">
-    <link rel="stylesheet" href="./register.css">
-    <title>Kenzie Store </title>
+    <link rel="stylesheet" href="../../styles/toasts.css">
+    <link rel="stylesheet" href="./about.css">
+    <title>Kenzie Store</title>
 </head>
 
 <body>
@@ -23,7 +22,7 @@
         <div class="header container">
             <div class="logo">
                 <div>
-                    <img id="logo" src="../../assets/icons/logo.svg" alt="">
+                    <img id="logo" src="../../assets/icons/logo.svg" alt="Logo">
                     <h1 class="fontOneSemibold">Kenzie Store</h1>
                 </div>
                 <article class="containerBar bntMore" >
@@ -34,7 +33,7 @@
             </div>
             <div class="nav">
                 <a href="../../../index.html"><button class="fontTwoBold bntOne">Home</button></a>
-                <a href="../Login/login.html"><button class="fontTwoBold bntTwo">login</button></a>
+                <a href="../../pages/register/register.html"><button class="fontTwoBold bntOne">Cadastre-se</button></a>
             </div>
             <button id="darkMode" class="dark-mode-button">
               <span>
@@ -45,16 +44,12 @@
     </header>
     <main>
         <section>
-            <div class="container div">
-                <h2 class="fontFiveBold">Cadastre-se</h2>
-                <form id="register">
-                    <h1 class="fontFourRegular" >E-mail</h1>
-                    <input required id="email" type="email" placeholder="Seu e-mail" class="entry fontFourRegular">
-                    <h1 class="fontFourRegular">Senha</h1>
-                    <input required id="password" type="password" placeholder="Seu telefone" class="entry fontFourRegular">
-                    <button class="bntTwo fontTwoBold" id="bntRegister" type="submit">Cadastre-se</button>
-                </form>
-            </div>
+          <figure>
+            <img src="../../assets/img/caio.jpg" alt="">
+            <img src="../../assets/img/tuco.jpg" alt="">
+            <img src="../../assets/img/natan.png" alt="">
+            <img src="../../assets/img/marcele.jpg" alt="">
+          </figure>
         </section>
     </main>
     <footer>
@@ -112,8 +107,6 @@
           <span class="toast-message"></span>
         </div>
       </div>
-    <script type="module" src="./register.js"></script>
-
 </body>
-
+<script type="module" src="./login.js"></script>
 </html>

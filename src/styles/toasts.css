@@ -24,10 +24,10 @@
   padding: 40px 42px;
 }
 .toast.success {
-  background-color: var(--color-brand-300);
+  background-color: var( --color-success-300);
 }
 .toast.alert {
-  background-color: var(--color-brand-200);
+  background-color: var(--color-alert-200);
 }
 
 .toast-message {

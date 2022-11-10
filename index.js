@@ -1,23 +1,27 @@
 import { addProductToCart, getAllCategories, getAllProducts, getSingleUser, listProductsInCategory } from "./src/scripts/api.js";
 import { darkmode } from "./src/scripts/darkMode.js";
 import { configFooterExpandInfo } from "./src/scripts/footer.js";
+import { bntOpen } from "./src/scripts/header.js";
 import { hideToast, showToast } from "./src/scripts/toasts.js";
 
-configFooterExpandInfo()
 
-const allProducts = await getAllProducts()
-let allCategories = await getAllCategories()
+const renderpage = async () => {
+    darkmode()
+    bntOpen()
+    const allProducts = await getAllProducts()
+    const allCategories = await getAllCategories()
+    productsCards(allProducts)
+    renderFilterButtons(allCategories)
+    getSingleUser(1)
+    configFooterExpandInfo()
+}
+renderpage()
 
 
 const cart = document.getElementById('cart')
 cart.addEventListener('click', () => {
     window.location.href = "/src/pages/cart/cart.html"
 })
-const noFilter = document.getElementById('noFilter')
-noFilter.addEventListener('click', () => {
-    productsCards(allProducts)
-})
-
 
 function productsCards(array) {
     const cardsContainer = document.getElementById('listProducts')
@@ -30,7 +34,6 @@ function productsCards(array) {
         let productMainInfo = document.createElement('div')
         let productName = document.createElement("p")
         let productCategory = document.createElement("p")
-        let productDescription = document.createElement("p")
         let productBuy = document.createElement("div")
         let productPrice = document.createElement("p")
         let addCartButton = document.createElement("button")
@@ -89,24 +92,20 @@ function productsCards(array) {
         productName.innerText = product.title
         productCategory.innerText = product.category
         productPrice.innerText = `R$:${product.price}`
-        productDescription = product.description
 
         productMainInfo.append(productName, productCategory)
         productImgContainer.append(productImg)
         productBuy.append(productPrice, addCartButton)
         productMarketDescription.append(productMainInfo, productBuy)
         cardContent.append(productImgContainer, productMarketDescription)
-        //cardContent.append(productImg, productMarketDescription)
         cardsContainer.append(cardContent)
 
     })
 
 }
-productsCards(allProducts)
-
-
 function renderFilterButtons(array) {
-    const main = document.getElementsByClassName('filterButtonContainer')[0]
+    const main = document.querySelector('nav')
+    main.innerHTML = '<button id="noFilter" class="bntTwo">Todos</button>'
     array.forEach((category) => {
         let button = document.createElement('button')
         button.innerText = category
@@ -115,19 +114,18 @@ function renderFilterButtons(array) {
         button.addEventListener('click', () => {
             categoryList(category)
         })
-        main.appendChild(button)
+        main.append(button)
     })
+    bntNofilter()
 }
-renderFilterButtons(allCategories)
 
 async function categoryList(category) {
     let categoryProducts = await listProductsInCategory(category)
     productsCards(categoryProducts)
 }
-
-getSingleUser(1)
-async function userInfo(object) {
-
+const bntNofilter = () => {
+    const noFilter = document.getElementById('noFilter')
+    noFilter.addEventListener('click', () => {
+        productsCards(allProducts)
+    })
 }
-
-darkmode()

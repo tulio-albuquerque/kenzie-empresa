@@ -4,6 +4,7 @@ import { shared } from "../../scripts/forms.js"
 import { hideToast, showToast } from "../../scripts/toasts.js"
 import { bntOpen} from "../../scripts/header.js"
 const initial = () => {
+    darkmode()
     bntOpen()
     configFooterExpandInfo()
     const bntLogin = document.querySelector('form')
@@ -24,4 +25,3 @@ const initial = () => {
 
 initial()
 
-darkmode()
