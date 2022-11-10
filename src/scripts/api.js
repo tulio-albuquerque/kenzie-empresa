@@ -113,3 +113,18 @@ export async function getAllCategories(){
   catch(error){
     console.log(error)
   }}
+
+  export async function getCart() {
+    const authorization = JSON.parse(localStorage.getItem('authorization'))
+    const token = authorization.token;
+    const options = {
+      method: 'GET',
+      headers: {"Content-Type": 'application/json', 
+      authorization: `Bearer ${JSON.parse(localStorage.getItem(token))}`},
+  }
+
+  const response = await fetch(`${baseURL}/carts/getCart`, options);
+  console.log(response);
+  const responseJson = await response.json();
+  return {responseJson}; 
+  }
