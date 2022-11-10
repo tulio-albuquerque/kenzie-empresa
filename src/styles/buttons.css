@@ -121,11 +121,13 @@ button {
     cursor: pointer;
 }
 
-.dark-mode-button{
+.dark-mode-button {
     display: flex;
     align-items: center;
     padding: 8px;
-    height: 7vh;
-    border-radius: 32px;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 100%;
+    border: 3px solid var(--color-grey-100);
     background-color: var(--color-grey-800-fixed);
 }
