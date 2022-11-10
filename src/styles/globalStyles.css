@@ -97,5 +97,5 @@ body::-webkit-scrollbar-thumb{
 }
 
 .colorGreySeven {
-  color: var(--color-grey-700);
+  color: var(--color-grey-100);
 }
