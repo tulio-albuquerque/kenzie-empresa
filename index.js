@@ -126,6 +126,11 @@ async function categoryList(category) {
 const bntNofilter = () => {
     const noFilter = document.getElementById('noFilter')
     noFilter.addEventListener('click', () => {
-        productsCards(allProducts)
+        renderAllProducts()
     })
+}
+
+async function renderAllProducts(){
+    let products = await getAllProducts()
+    productsCards(products)
 }

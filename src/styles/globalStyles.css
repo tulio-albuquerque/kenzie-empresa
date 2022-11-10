@@ -30,12 +30,20 @@ li {
   --font-size-3: 1.25rem;
   --font-size-4: 1rem;
   --font-size-5: 2rem;
+
+  --card-shadow: rgba(0,0,0,0.5);
+  --card-color: #fff;
+  --color-grey-800-fixed: #ffffff;
+  --color-grey-400-fixed: rgba(0,0,0,0.25);
 }
 
 .dark-mode:root{
   --color-brand-100: #f8f8f8;
-  --color-brand-200: #470000;
-  --color-brand-300: #0a3200;
+  --color-brand-150: #051e32d3;
+  --color-brand-200: #410000;
+  --color-brand-300: #e7eef5;
+  --color-alert-200: #3a0000;
+  --color-success-300: #0b3700;
   --color-grey-800: #15171a;
   --color-grey-700: #212529;
   --color-grey-600: #2b2f33;
@@ -50,10 +58,14 @@ li {
   --font-size-4: 1rem;
   --font-size-5: 2rem;
 
+  --card-shadow: #868e96;
+  --card-color: #212529;
+  --color-grey-800-fixed: #ffffff;
+  --color-grey-400-fixed: rgba(0,0,0,0.25);
+  
   background-color: var(--color-grey-800);
   color: var(--color-brand-100);
 }
-
 body {
   font-family: 'Inter';
   width: 100%;

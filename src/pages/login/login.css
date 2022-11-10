@@ -10,7 +10,7 @@ main {
 }
 
 section {
-    box-shadow: -1px 1px 17px 3px var(--color-grey-400);
+    box-shadow: -1px 1px 17px 3px var(--color-grey-400-fixed);
     height: 60%;
     width: 100%;
     background-color: var(--color-grey-600);
