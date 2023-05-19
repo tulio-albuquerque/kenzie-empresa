@@ -9,6 +9,7 @@
     Figma Base
     Figma : https://www.figma.com/community/file/1165340986577131391
 </p>
+
 ### Tecnonlogias
 
 feramentas utilizadas no projeto :
@@ -16,16 +17,18 @@ feramentas utilizadas no projeto :
 - [javaScript]
 - [css]
 
-<h4>completo</h4>
+#### completo
+
 ### Fetures
-- [x] Mobile First.
+
+- [ ] Mobile First.
 - [x] Página Login
 - [x] Estilização
 - [x] Form de login
 - [x] Uso da API
 - [x] Redirecionamento para a Home
 - [x] Página Cadastro
-- [] Mesma Estilização da Página de Login
+- [ ] Mesma Estilização da Página de Login
 - [x] Form de cadastro
 - [x] Uso da API
 - [x] *Redirecionamento para a página de login
